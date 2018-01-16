@@ -11,6 +11,7 @@ that as a trusted node.
 ### Trusting ACES Listener Node instance
 
 Set up ark network configuration to point to ACES public Listener node
+ark-listener-mainnet.arkaces.com
 in `/etc/aces-ark-listener/ark-network.yml`:
 
 ```
@@ -19,11 +20,11 @@ version: 1.0
 netHash: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
 seedPeers:
   -
-    hostname: ark-listener-mainnet.arkaces.com
+    hostname: 52.35.9.191
     port: 4001
 trustedPeers:
   -
-    hostname: ark-listener-mainnet.arkaces.com
+    hostname: 52.35.9.191
     port: 4001
 ```
 
