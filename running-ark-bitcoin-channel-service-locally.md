@@ -67,6 +67,158 @@ mvn install
 
 ## Create Service Config
 
+Create Ark network config file in `/etc/aces-ark-bitcoin-channel-service/ark-network.yml`:
+
+```
+scheme: http
+version: 1.0
+netHash: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
+seedPeers:
+  -
+    hostname: 5.39.9.240
+    port: 4001
+  -
+    hostname: 5.39.9.241
+    port: 4001
+  -
+    hostname: 5.39.9.242
+    port: 4001
+  -
+    hostname: 5.39.9.243
+    port: 4001
+  -
+    hostname: 5.39.9.244
+    port: 4001
+  -
+    hostname: 5.39.9.250
+    port: 4001
+  -
+    hostname: 5.39.9.251
+    port: 4001
+  -
+    hostname: 5.39.9.252
+    port: 4001
+  -
+    hostname: 5.39.9.253
+    port: 4001
+  -
+    hostname: 5.39.9.254
+    port: 4001
+  -
+    hostname: 5.39.9.255
+    port: 4001
+  -
+    hostname: 5.39.53.48
+    port: 4001
+  -
+    hostname: 5.39.53.49
+    port: 4001
+  -
+    hostname: 5.39.53.50
+    port: 4001
+  -
+    hostname: 5.39.53.51
+    port: 4001
+  -
+    hostname: 5.39.53.52
+    port: 4001
+  -
+    hostname: 5.39.53.53
+    port: 4001
+  -
+    hostname: 5.39.53.54
+    port: 4001
+  -
+    hostname: 5.39.53.55
+    port: 4001
+  -
+    hostname: 37.59.129.160
+    port: 4001
+  -
+    hostname: 37.59.129.161
+    port: 4001
+  -
+    hostname: 37.59.129.162
+    port: 4001
+  -
+    hostname: 37.59.129.163
+    port: 4001
+  -
+    hostname: 37.59.129.164
+    port: 4001
+  -
+    hostname: 37.59.129.165
+    port: 4001
+  -
+    hostname: 37.59.129.166
+    port: 4001
+  -
+    hostname: 37.59.129.167
+    port: 4001
+  -
+    hostname: 37.59.129.168
+    port: 4001
+  -
+    hostname: 37.59.129.169
+    port: 4001
+  -
+    hostname: 37.59.129.170
+    port: 4001
+  -
+    hostname: 37.59.129.171
+    port: 4001
+  -
+    hostname: 37.59.129.172
+    port: 4001
+  -
+    hostname: 37.59.129.173
+    port: 4001
+  -
+    hostname: 37.59.129.174
+    port: 4001
+  -
+    hostname: 37.59.129.175
+    port: 4001
+  -
+    hostname: 193.70.72.80
+    port: 4001
+  -
+    hostname: 193.70.72.81
+    port: 4001
+  -
+    hostname: 193.70.72.82
+    port: 4001
+  -
+    hostname: 193.70.72.83
+    port: 4001
+  -
+    hostname: 193.70.72.84
+    port: 4001
+  -
+    hostname: 193.70.72.85
+    port: 4001
+  -
+    hostname: 193.70.72.86
+    port: 4001
+  -
+    hostname: 193.70.72.87
+    port: 4001
+  -
+    hostname: 193.70.72.88
+    port: 4001
+  -
+    hostname: 193.70.72.89
+    port: 4001
+  -
+    hostname: 193.70.72.90
+    port: 4001
+    
+trustedPeers:
+  -
+    hostname: 52.35.9.191
+    port: 4001
+```
+
 Create Service config file in `/etc/aces-ark-bitcoin-channel-service/application.yml`:
 
 ```
@@ -86,7 +238,7 @@ serverInfo:
       unit: "BTC"
       displayValue: "5000 BTC"
 
-arkNetworkConfigPath: "file:/home/brady/aces-runtime/ark-btc-channel/ark-network.yml"
+arkNetworkConfigPath: "file:/etc/aces-ark-bitcoin-channel-service/ark-network.yml"
 
 fees:
   btcFlatFee: 0
