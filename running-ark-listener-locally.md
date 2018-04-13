@@ -71,26 +71,6 @@ arkAuth:
 ```
 
 
-## Install dependencies
-
-Install maven dependencies manually (in the future, builds will be made available 
-though an artifact repository):
-
-```
-cd ~
-git clone git@github.com:ark-aces/ark-java-client.git
-cd ark-java-client
-mvn install
-```
-
-```
-cd ~
-git clone git@github.com:ark-aces/aces-server-lib-java.git
-cd aces-server-lib-java
-mvn install
-```
-
-
 ## Running Listener 
 
 ```

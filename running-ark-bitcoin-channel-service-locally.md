@@ -43,28 +43,6 @@ It may take several hours for the bitcoin testnet to fully sync.
 Follow the instructions on the [Running Ark Listener Locally](running-ark-listener-locally.md) guide. 
 
 
-## Install Java Dependencies
-
-Install maven dependencies manually (in the future, builds will be made available 
-though an artifact repository):
-
-```
-cd ~
-git clone git@github.com:ark-aces/ark-java-client.git
-cd ark-java-client
-mvn install
-```
-
-```
-cd ~
-git clone git@github.com:ark-aces/aces-server-lib-java.git
-cd aces-server-lib-java
-git fetch --all --tags --prune
-git checkout tags/v5.6.0
-mvn install
-```
-
-
 ## Create Service Config
 
 Create Ark network config file in `/etc/aces-ark-bitcoin-channel-service/ark-network.yml`:

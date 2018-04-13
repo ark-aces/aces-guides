@@ -88,28 +88,6 @@ Note: this configuration is intended to be uses for local development only. For 
 environments, the listener application should be configured to use a `postgresql` database.
 
 
-## Install Java Dependencies
-
-Install maven dependencies (in the future, builds will be made available 
-though an artifact repository):
-
-```
-cd ~
-git clone git@github.com:ark-aces/ark-java-client.git
-cd ark-java-client
-mvn install
-```
-
-```
-cd ~
-git clone git@github.com:ark-aces/aces-server-lib-java.git
-cd aces-server-lib-java
-git fetch --all --tags --prune
-git checkout tags/v5.6.0
-mvn install
-```
-
-
 ## Running Listener 
 
 ```
