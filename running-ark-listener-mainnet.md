@@ -358,7 +358,8 @@ spring:
 cd /apps/
 git clone https://github.com/ark-aces/aces-listener-ark
 cd aces-listener-ark
-mvn package -Djar.finalName=aces-listener-ark
+mvn package
+find ./target -name "*.jar" -exec cp {} ./target/aces-listener-ark.jar \;
 ```
 
 ### Set up systemd
@@ -386,8 +387,12 @@ service aces-listener-ark start
 ```
 
 
-## Testing Listener
+## Update Application
 
 ```
-curl http://localhost:9091/
+cd /apps/aces-listener-ark
+git pull
+mvn clean package
+find ./target -name "*.jar" -exec cp {} ./target/aces-listener-ark.jar \;
+sudo service aces-listener-ark restart
 ```

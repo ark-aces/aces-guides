@@ -73,7 +73,8 @@ Build the service application:
 cd /apps/
 git clone https://github.com/ark-aces/aces-bitcoin-ark-channel-service
 cd aces-ark-bitcoin-channel-service
-mvn package -Djar.finalName=aces-bitcoin-ark-channel-service
+mvn package
+find ./target -name "*.jar" -exec cp {} ./target/aces-bitcoin-ark-channel-service.jar \;
 ```
 
 
@@ -114,4 +115,14 @@ server {
 
 ```
 sudo service nginx restart
+```
+
+## Update Application
+
+```
+cd /apps/aces-bitcoin-ark-channel-service
+git pull
+mvn clean package
+find ./target -name "*.jar" -exec cp {} ./target/aces-bitcoin-ark-channel-service.jar \;
+sudo service aces-bitcoin-ark-channel-service restart
 ```
