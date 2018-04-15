@@ -3,19 +3,11 @@
 This service node requires an Ark Listener and Bitcoin JSON RPC service running.
 
 
-## Set up Server
+## Set Up Dependencies
 
-See: [ACES Service Server Setup](aces-service-server-setup.md)
-
-
-## Set up Bitcoin Network configuration
-
-See: [ACES Bitcoin Setup](aces-bitcoin-setup.md)
-
-
-### Set Up Ark Listener
-
-See: [Running Ark Listener](running-ark-listener-mainnet.md)
+1. [ACES Service Server Setup](aces-service-server-setup.md)
+2. [ACES Bitcoin Setup](aces-bitcoin-setup.md)
+3. [Running Ark Listener](running-ark-listener-mainnet.md)
 
 
 ## Set up Ark-Bitcoin Channel Service
