@@ -41,6 +41,14 @@ serverInfo:
 
 arkNetworkConfigPath: "file:/etc/aces/ark-network.yml"
 
+spring:
+  datasource:
+    url: "jdbc:h2:/data/aces/aces-ark-bitcoin-channel-service.db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE"
+    driver-class-name: "org.h2.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: "update"
+
 fees:
   btcFlatFee: 0.005
   btcPercentFee: 2.25
@@ -90,8 +98,8 @@ WantedBy=multi-user.target
 
 ```
 systemctl daemon-reload
-systemctl enable aces-ark-bitcoin-channel
-service aces-ark-bitcoin-channel start
+systemctl enable aces-ark-bitcoin-channel-service
+service aces-ark-bitcoin-channel-service start
 ```
 
 

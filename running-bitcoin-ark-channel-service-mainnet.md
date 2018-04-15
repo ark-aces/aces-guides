@@ -20,7 +20,7 @@ See: [Running Bitcoin Listener](running-bitcoin-listener-mainnet.md)
 
 ## Set up Bitcoin-Ark Channel Service
 
-Create Service config file in `/etc/aces-bitcoin-ark-channel-service/application.yml`:
+Create Service config file in `/etc/aces/aces-bitcoin-ark-channel-service/application.yml`:
 
 ```
 serverInfo:
@@ -57,7 +57,7 @@ server:
   port: 9190
 
 serviceArkAccount:
-  address: AewU1vEmPrtQNjdVo33cX84bfovY3jNAkV
+  address: change-me
   passphrase: change-me
 
 bitcoinRpc:
@@ -103,8 +103,8 @@ WantedBy=multi-user.target
 
 ```
 systemctl daemon-reload
-systemctl enable aces-bitcoin-ark-channel
-service aces-bitcoin-ark-channel start
+systemctl enable aces-bitcoin-ark-channel-service
+service aces-bitcoin-ark-channel-service start
 ```
 
 

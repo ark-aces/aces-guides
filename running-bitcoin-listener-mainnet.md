@@ -18,6 +18,14 @@ serverInfo:
   description: "ACES Listener implementation for Bitcoin"
   version: "1.0.0"
   websiteUrl: "https://arkaces.com"
+  
+spring:
+  datasource:
+    url: "jdbc:h2:/data/aces/aces-listener-bitcoin.db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE"
+    driver-class-name: "org.h2.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: "update"
 
 maxScanBlockDepth: 4
 

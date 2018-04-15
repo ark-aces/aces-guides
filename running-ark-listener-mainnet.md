@@ -18,6 +18,7 @@ in `/etc/aces/ark-network.yml`:
 scheme: http
 version: 1.0
 netHash: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
+pubKeyHash: 0x17
 seedPeers:
   -
     hostname: 5.39.9.240
@@ -341,6 +342,14 @@ server:
 
 arkAuth:
   requireAuth: false 
+  
+spring:
+  datasource:
+    url: "jdbc:h2:/data/aces/aces-listener-ark.db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE"
+    driver-class-name: "org.h2.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: "update"
 ```
 
 ### Build application

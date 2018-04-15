@@ -51,6 +51,7 @@ Create Ark network config file in `/etc/aces-ark-bitcoin-channel-service/ark-net
 scheme: http
 version: 1.0
 netHash: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
+pubKeyHash: 0x17
 seedPeers:
   -
     hostname: 5.39.9.240
@@ -197,7 +198,7 @@ trustedPeers:
     port: 4001
 ```
 
-Create Service config file in `/etc/aces-ark-bitcoin-channel-service/application.yml`:
+Create Service config file in `/etc/aces/aces-ark-bitcoin-channel-service/application.yml`:
 
 ```
 serverInfo:

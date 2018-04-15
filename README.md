@@ -2,3 +2,8 @@
 
 This repo contains guides to help get started building and deploying ACES Services.
 
+
+## Main Guides
+
+- [Set Up ACES Bitcoin Channel Node](setup-bitcoin-channel-node.md)
+
