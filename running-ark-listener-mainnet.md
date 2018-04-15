@@ -349,7 +349,7 @@ arkAuth:
 cd /apps/
 git clone https://github.com/ark-aces/aces-listener-ark
 cd aces-listener-ark
-mvn package
+mvn package -Djar.finalName=aces-listener-ark
 ```
 
 ### Set up systemd
@@ -363,12 +363,12 @@ Description=Aces Listener Ark
 [Service]
 Restart=always
 WorkingDirectory=/apps/aces-listener-ark/target/
-ExecStart=/usr/bin/java -jar aces_listener_ark-1.0.0.jar -Xms64m -Xmx128m --spring.config.location=file:/etc/aces/aces-listener-ark/application.yml
+ExecStart=/usr/bin/java -Xms64m -Xmx128m -jar aces-listener-ark.jar \
+  --spring.config.location=file:/etc/aces/aces-listener-ark/application.yml
 
 [Install]
 WantedBy=multi-user.target
 ```
-
 
 ```
 systemctl daemon-reload
