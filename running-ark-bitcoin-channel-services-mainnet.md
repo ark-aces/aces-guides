@@ -20,7 +20,7 @@ See: [Running Ark Listener](running-ark-listener-mainnet.md)
 
 ## Set up Ark-Bitcoin Channel Service
 
-Create Service config file in `/etc/aces-ark-bitcoin-channel-service/application.yml`:
+Create Service config file in `/etc/aces/aces-ark-bitcoin-channel-service/application.yml`:
 
 ```
 serverInfo:
