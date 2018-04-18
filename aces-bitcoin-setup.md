@@ -25,10 +25,10 @@ rpcpassword=change_this_to_a_long_random_password
 rpcallowip=127.0.0.1/0
 ```
 
-Start bitcoind using `txindex` and pruning to reduce required hard disk space:
+Start bitcoind using `txindex`:
 
 ```
-bitcoind -server -datadir=/data/bitcoin -txindex=1 -prune=550
+bitcoind -server -datadir=/data/bitcoin -txindex=1
 ```
 
 It may take a long time for the bitcoin to fully sync.
