@@ -71,7 +71,7 @@ sudo service nginx stop
 ```
 
 ```
-export DOMAIN_NAME=domain.com
+export DOMAIN_NAME=example.com
 certbot certonly -d $DOMAIN_NAME --force-renewal
 ```
 

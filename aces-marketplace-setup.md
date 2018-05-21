@@ -178,18 +178,18 @@ spring:
       mail.smtp.auth: true
       mail.startttls.enable: true
 
-baseUrl: "https://marketplace.domain.com"
+baseUrl: "https://marketplace.example.com"
 
 recaptcha:
   secret: "change-me"
 
 email:
   fromName: "ACES Marketplace"
-  fromEmailAddress: "support@domain.com"
+  fromEmailAddress: "support@example.com"
 
 ```
 
-Note: replace any instances of `domain.com` with the actual domain name used for your particular 
+Note: replace any instances of `example.com` with the actual domain name used for your particular 
 ACES Marketplace instance.
 
 ### Create Backend Application Start script
@@ -288,23 +288,23 @@ sudo service nginx stop
 ```
 
 ```
-export DOMAIN_NAME=marketplace.domain.com
+export DOMAIN_NAME=marketplace.example.com
 certbot certonly -d $DOMAIN_NAME --force-renewal
 ```
 
-In this example we show `marketplace.domain.com`, but you should replace that with your actual
+In this example we show `marketplace.example.com`, but you should replace that with your actual
 marketplace instance domain.
 
 ## Setup Nginx
 
 Edit `/etc/nginx/sites-enabled/default` and add the following basic setup. Replace 
-`marketplace.domain.com` with your actual marketplace domain name.
+`marketplace.example.com` with your actual marketplace domain name.
 
 ```
 server {
     listen 80;
     root /var/www/aces-marketplace/;
-    server_name marketplace.domain.com;
+    server_name marketplace.example.com;
     
     # Serve ACES Marketplace frontend app directly
     location / {
@@ -317,8 +317,8 @@ server {
     }
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/marketplace.domain.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/marketplace.domain.com/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/marketplace.example.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/marketplace.example.com/privkey.pem; # managed by Certbot
 
     if ($scheme != "https") {
         return 301 https://$host$request_uri;
@@ -332,10 +332,10 @@ sudo service nginx restart
 
 ## Testing Setup
 
-With this setup, the frontend application is served at `https://marketplace.domain.com` (replace domain name with
+With this setup, the frontend application is served at `https://marketplace.example.com` (replace domain name with
 the one used in your setup). 
 
-The backend API is served at `https://marketplace.domain.com/api/`.
+The backend API is served at `https://marketplace.example.com/api/`.
 
 You can follow the instructions in [ACES Marketplace Guide](aces-marketplace.md) for 
 posting services to your marketplace instance using the API.
