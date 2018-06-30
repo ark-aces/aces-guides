@@ -155,8 +155,10 @@ server:
   port: 8081
 
 oauth2:
+  # Do not change oauth2 clientId/secret since they are hard coded into the marketplace frontend app.
+  # In the future, these may be configurable for different client app instances
   clientId: "marketplace"
-  secret: "change-me"
+  secret: "secret"
   tokenValiditySeconds: 86400
 
 spring:
