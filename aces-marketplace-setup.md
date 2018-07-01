@@ -52,7 +52,7 @@ sudo apt-get install oracle-java8-installer
 
 sudo apt-get install maven
 sudo apt-get install pwgen
-sudo apt-get instal nginx
+sudo apt-get install nginx
 ```
 
 Install node and npm:
@@ -256,7 +256,7 @@ will be served up by your nginx configuration in a later step.
 
 ```
 mkdir /var/www/aces-marketplace/
-cp -R /app/aces-marketplace/frontend/dist/** /var/www/aces-marketplace/
+cp -R /apps/aces-marketplace/frontend/dist/** /var/www/aces-marketplace/
 ```
 
 
