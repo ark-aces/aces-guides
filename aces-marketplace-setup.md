@@ -52,7 +52,7 @@ sudo apt-get install oracle-java8-installer
 
 sudo apt-get install maven
 sudo apt-get install pwgen
-sudo apt-get instal nginx
+sudo apt-get install nginx
 ```
 
 Install node and npm:
@@ -155,8 +155,10 @@ server:
   port: 8081
 
 oauth2:
+  # Do not change oauth2 clientId/secret since they are hard coded into the marketplace frontend app.
+  # In the future, these may be configurable for different client app instances
   clientId: "marketplace"
-  secret: "change-me"
+  secret: "secret"
   tokenValiditySeconds: 86400
 
 spring:
@@ -254,7 +256,7 @@ will be served up by your nginx configuration in a later step.
 
 ```
 mkdir /var/www/aces-marketplace/
-cp -R /app/aces-marketplace/frontend/dist/** /var/www/aces-marketplace/
+cp -R /apps/aces-marketplace/frontend/dist/** /var/www/aces-marketplace/
 ```
 
 
