@@ -140,7 +140,7 @@ The backend application needs to send emails for password reset and other notifi
 There are many email providers that can be used including Gmail, SendGrid, MailGun, or hosting
 your own postfix server.
 
-We recommend using [MailGun](www.mailgun.com) since it is easy to set up and is free up to 10k emails per month.
+We recommend using [MailGun](https://www.mailgun.com) since it is easy to set up and is free up to 10k emails per month.
 
 Use your SMTP credentials supplied by email delivery provider in the `application.yml` configuration below.
 
