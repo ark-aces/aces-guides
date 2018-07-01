@@ -141,6 +141,8 @@ There are many email providers that can be used including Gmail, SendGrid, MailG
 your own postfix server.
 
 We recommend using [MailGun](https://www.mailgun.com) since it is easy to set up and is free up to 10k emails per month.
+Note: You must add test email address to the MailGun sandbox whitelist to receive emails prior to 
+activating your account. Once your MailGun account is activated, you can send up to 10k emails per month for free.
 
 Use your SMTP credentials supplied by email delivery provider in the `application.yml` configuration below.
 
